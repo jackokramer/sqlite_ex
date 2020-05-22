@@ -6,13 +6,25 @@ conn = sqlite3.connect('customer.db')
 ## create cursor
 c = conn.cursor()
 
-#
+###FORMART RESULTS###
+#c.execute("SELECT * FROM customers")
 
-c.execute("SELECT * FROM customers")
 #c.fetchone()
 #c.fetchmany(3)
 
-print(c.fetchall())
+#items = c.fetchall()
+
+#print items
+
+#print("NAME " + "\t\tEMAIL")
+#print("-------" + "\t\t-------")
+
+#for item in items:
+#    print(item[0] + " " + item[1] + " \t\t " + item[2])
+
+###END FORMAT RESULTS
+
+## ADDING MANY ##
 
 #many_customers = [
 #                    ('jack', 'brown', 'jack@brown.com'),
@@ -22,7 +34,7 @@ print(c.fetchall())
 
 #c.executemany("INSERT INTO customers VALUES(?,?,?)", many_customers)
 #print('Successful insert for many')
-
+#### ADDING MANY ###
 ### DATATYPES ###
 ##NULL
 #INTEGER
