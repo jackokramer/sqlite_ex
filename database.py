@@ -50,6 +50,20 @@ def delete_rec(id):
     conn.commit()
     conn.close()
 
+### WHERE Function ###
+
+def email_add(email):
+    conn - sqlite3.connect('customer.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM customers WHERE email * (?)", (email,))
+    items = c.fetchall()
+
+    for item in items:
+        print(item)
+
+    #COmmit our commands and close connection
+    conn.commit()
+    conn.close()
 
 
 ###FORMART RESULTS###
